@@ -1,0 +1,34 @@
+.multipleinner{
+    display: flex;
+	background: white !important;
+	padding: 5px;
+}
+
+.fileexplorerinnermenu{
+	padding-bottom: 10px;
+	display: flex;
+}
+
+.fileexplorerinnermenu a{
+	display: flex;
+}
+
+.fileexplorerinnermenu img{
+	width: 20px;
+    height: 20px;
+    margin-right: 2px;
+}
+
+.fileexplorerinnermenu p{
+    font-size: 13px;
+    color: #333;
+    margin: auto 0;
+}
+
+.fileexplorerinnermenu i{
+	    margin: auto 0;
+		padding-left: 7px;
+		padding-right: 7px;
+		font-size: 12px;
+		font-weight: bold;
+}

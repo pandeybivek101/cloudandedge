@@ -1,0 +1,108 @@
+
+
+
+
+{% load static %}
+<!doctype html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title> {% if siteoption.site_name %} {{ siteoption.site_name }}  {% else %} Consultancy  {% endif %}
+         {% block title %}{% endblock title %} </title>
+         <link rel="icon" href="{% if siteoption.favicon %} {{siteoption.favicon.url}} {% else %}{% static 'assets/images/brand/TekGroLogo.png' %} {% endif %}" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Consultancy System" name="description" />
+    <meta name="csrf-token" content="{{ csrf_token }}" />
+    <meta content="Consultancy" name="author" />
+  
+    
+    
+    <link rel="stylesheet" href="{% static 'assets/libs/dragula/dragula.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/app.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/icons.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/solid.min.css" integrity="sha512-qzgHTQ60z8RJitD5a28/c47in6WlHGuyRvMusdnuWWBB6fZ0DWG/KyfchGSBlLVeqAz+1LzNq+gGZkCSHnSd3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.css" integrity="sha512-In/+MILhf6UMDJU4ZhDL0R0fEpsp4D3Le23m6+ujDWXwl3whwpucJG1PEmI3B07nyJx+875ccs+yX2CqQJUxUw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'assets/libs/fullcalendar/main.min.css' %}">
+     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://unpkg.com/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="{% static 'assets/css/fileupload.css' %} ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.17/css/intlTelInput.css" integrity="sha512-gxWow8Mo6q6pLa1XH/CcH8JyiSDEtiwJV78E+D+QP0EVasFs8wKXq16G8CLD4CJ2SnonHr4Lm/yY2fSI2+cbmw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {% block css %}{% endblock css %}
+    <link rel="stylesheet" href="{% static 'assets/css/custom.css' %} ">
+
+</head>
+
+<body>
+    <audio id="alertSound" >
+        <source src="{% static 'assets/alertsound.wav' %}" type="audio/mpeg">
+        </audio>
+        
+        
+    <div id="layout-wrapper">
+        {% include 'layouts/navbar.html' %}
+		{% include 'layouts/sidebar.html' %}
+        <div class="main-content">
+            <div class="page-content">
+                <div class="container-fluid">
+                    
+                      {% if messages %}
+                            {% for message in messages %}
+                            <div class="fs-14 alert alert-success alert-dismissible fade show" role="alert">
+                                {{message}}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                              </div>
+                            {% endfor %}
+                        {% endif %}
+                        
+                    {% block content %}{% endblock content %}
+                </div>
+                
+            </div>    
+        </div>
+        
+    </div>
+
+
+
+
+
+    <!-- JAVASCRIPT -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{% static 'assets/libs/bootstrap/js/bootstrap.bundle.min.js' %}"  ></script>
+    <script src="{% static 'assets/libs/simplebar/simplebar.min.js' %}"  ></script>
+    <script src="{% static 'assets/libs/feather-icons/feather.min.js' %}"  ></script>
+    <script src="{% static 'assets/libs/node-waves/waves.min.js' %}"  ></script>
+    <script src="{% static 'assets/libs/apexcharts/apexcharts.min.js' %}"  ></script>
+    {% comment %} <script src="{% static 'assets/js/dashboard-projects.init.js' %}"  ></script> {% endcomment %}
+   
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js" integrity="sha512-8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{% static 'assets/libs/dragula/dragula.min.js' %}"></script>
+    <script src="{% static 'assets/libs/dom-autoscroller/dom-autoscroller.min.js' %}"></script>
+    <script src="{% static 'assets/libs/fullcalendar/main.min.js' %}"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{% static 'assets/js/tasks-kanban.init.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.17/js/intlTelInput.min.js" integrity="sha512-1NlRc/n6l/Gl7K7u9g6Z9kxZsKqcJV5uWM/Tv/WCjxDBqUSlxlgHgQI4Z17RW7BdNJjgLj0l6x0kGd0DOvu4AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script src="https://unpkg.com/@yaireo/tagify"></script>
+    <script src="https://unpkg.com/@yaireo/tagify@3.1.0/dist/tagify.polyfills.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.2/chart.min.js" integrity="sha512-zjlf0U0eJmSo1Le4/zcZI51ks5SjuQXkU0yOdsOBubjSmio9iCUp8XPLkEAADZNBdR9crRy3cniZ65LF2w8sRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{% static 'assets/js/app.js' %}"  ></script>
+    <script src="{% static 'assets/js/layout.js' %}"  ></script>
+    {% block js %}{% endblock js %}
+    <script src="{% static 'assets/js/custom.js' %}"  ></script>
+   
+</body>
+
+</html>

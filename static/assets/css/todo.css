@@ -1,0 +1,111 @@
+.unfinished-bg{
+    background-color: #ff6f00;
+    color: #fff;
+}
+.finished-bg{
+    background-color: #03a9f4;
+    color: #fff;
+}
+.bg-danger-transparent,.bg-warning-transparent,.bg-success-transparent{
+    border-radius: 50%;
+    margin-right: 6px;
+}
+.bg-danger-transparent {
+    background-color: rgba(255, 91, 81, 0.5) !important;
+    height: 0.75rem !important;
+    width: 0.75rem !important;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+.bg-warning-transparent {
+    background-color: rgba(236, 180, 3, 0.5) !important;
+    
+}
+.bg-success-transparent {
+    background-color: rgba(45, 206, 137, 0.5) !important;
+    height: 0.75rem !important;
+    width: 0.75rem !important;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+.w-3{
+    width: 0.75rem !important;
+}
+.h-3{
+    height: 0.75rem !important;
+}
+.sidebarPlansUl {
+    background: #f7f7f7;
+    padding-top: 0.8rem;
+    padding-bottom: 0.5rem;
+}
+.sidebarPlansUl li{
+    margin-bottom: 0.6rem;
+}
+
+.sidebarPlansUl li .option-dots{
+    font-size: 12px;
+}
+.table th{
+    font-family: "Poppins",sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: rgba(90, 99, 126, 0.55);
+    letter-spacing: 1px;
+    padding-bottom: 1rem;
+    border-bottom: none;
+    padding-top: 0.8rem;
+    background: #F3F3F9 !important;
+}
+.table td{
+    border: none;
+    border-right: 1px solid rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    white-space: nowrap;
+    vertical-align: top;
+    background: #fdfdfd;
+    font-size: 13px;
+    color: #212529;
+    font-family: "Poppins",sans-serif;
+    padding: 0.9rem 0.5rem;
+}
+.modal .btn-close{
+    font-size: 14px;
+}
+#create_plan, #edit_plan{
+    margin-right: 8px;
+}
+.todo-drag-status{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+    margin-top: 4px;
+}
+.remaining-days-footer{
+    padding-top: 4px;
+    padding-top: 4px;
+}
+.option-dots i{
+    color: #405189;
+    font-size: 14px;
+}
+.todo_btn_group{
+    margin-left: 8px;
+    height: 20px;
+}
+#todo_detail_form label{
+    font-size: 15px;
+}
+
+#todo_detail_form input, #todo_detail_form select{
+    font-size: 14px;
+}
+#todo_detail_form .form-row{
+    margin-bottom: 1rem;
+}
+
+.custom-file-label.text-truncate{
+    display: none;
+}

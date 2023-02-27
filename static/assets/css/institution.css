@@ -1,0 +1,16 @@
+#addInstBtn{
+    /* width: 240px; */
+    margin-left: 8px;
+}
+
+#submit-id-add_course{
+    /* margin-left: 12px; */
+    margin-top: 4px !important;
+}
+
+#id_scholarship_note{
+    height: 40px;
+}
+.DiplomaLevelDiv input[type="submit"]{
+    margin-left: 12px;
+}

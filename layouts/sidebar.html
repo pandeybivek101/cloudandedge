@@ -1,0 +1,70 @@
+{% load static %}
+<div class="app-menu navbar-menu">
+    <!-- LOGO -->
+    <div class="navbar-brand-box">
+        <!-- Dark Logo-->
+        <a href="index.html" class="logo logo-dark">
+            <span class="logo-sm">
+                <img src="{% if siteoption.logo_image %} {{ siteoption.logo_image.url }} {% else %}{% static 'assets/images/brand/logogold.png' %} {% endif %}" alt="" height="40">
+            </span>
+            <span class="logo-lg">
+                <img src="{% if siteoption.logo_image %} {{ siteoption.logo_image.url }} {% else %}{% static 'assets/images/brand/logogold.png' %} {% endif %}" alt="" height="40">
+            </span>
+        </a>
+        <!-- Light Logo-->
+        <a href="index.html" class="logo logo-light">
+            <span class="logo-sm">
+                <img src="{% if siteoption.logo_image %} {{ siteoption.logo_image.url }} {% else %}{% static 'assets/images/brand/logogold.png' %} {% endif %}" alt="" height="40">
+            </span>
+            <span class="logo-lg">
+                <img src="{% if siteoption.logo_image %} {{ siteoption.logo_image.url }} {% else %}{% static 'assets/images/brand/logogold.png' %} {% endif %}" alt="" height="40">
+            </span>
+        </a>
+        <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover" id="vertical-hover">
+            <i class="ri-record-circle-line"></i>
+        </button>
+    </div>
+
+    <div id="scrollbar" data-simplebar="init" class="h-100"><div class="simplebar-wrapper" style="margin: 0px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: 0px; bottom: 0px;"><div class="simplebar-content-wrapper" tabindex="0" role="region" aria-label="scrollable content" style="height: 100%; overflow: hidden scroll;"><div class="simplebar-content" style="padding: 0px;">
+        <div class="container-fluid">
+
+            <div id="two-column-menu">
+            </div>
+            <ul class="navbar-nav" id="navbar-nav" data-simplebar="init"><div class="simplebar-wrapper" style="margin: 0px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: 0px; bottom: 0px;"><div class="simplebar-content-wrapper" tabindex="0" role="region" aria-label="scrollable content" style="height: auto; overflow: hidden;"><div class="simplebar-content" style="padding: 0px;">
+                <li class="menu-title"><span data-key="t-menu">Menu</span></li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="{% url 'dashboard' %}"  role="button">
+                        <i class="ri-dashboard-line"></i> <span data-key="t-dashboard">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link " href="{% url 'student_list' %}" role="button">
+                        <i class="ri-user-line"></i> <span data-key="t-Institution">Students</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link " href="{% url 'institution' %}" role="button">
+                        <i class="ri-building-line"></i> <span data-key="t-Institution">Institution</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link " href="{% url 'todo:assign_me' %}" role="button">
+                        <i class="ri-check-line"></i> <span data-key="t-Institution">Todo</span>
+                    </a>
+                </li>
+                
+
+                <li class="nav-item">
+                    <a class="nav-link menu-link " href="{% url 'sitesetting-update' %}">
+                        <i class="ri-settings-line"></i> <span data-key="t-multi-level">Site Settings</span>
+                    </a>
+                    
+                </li>
+
+            </div></div></div></div><div class="simplebar-placeholder" style="width: 249px; height: 1049px;"></div></div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="width: 0px; display: none;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: hidden;"><div class="simplebar-scrollbar" style="height: 0px; display: none;"></div></div></ul>
+        </div>
+        <!-- Sidebar -->
+    </div></div></div></div><div class="simplebar-placeholder" style="width: auto; height: 1049px;"></div></div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="width: 0px; display: none;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: visible;"><div class="simplebar-scrollbar" style="height: 51px; transform: translate3d(0px, 0px, 0px); display: block;"></div></div></div>
+
+    <div class="sidebar-background"></div>
+</div>
